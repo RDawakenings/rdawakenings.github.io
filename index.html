@@ -14,7 +14,7 @@
 		    <div class="col-lg-1 col-md-1 col-sm-0 col-xs-0">
             </div>
 		    <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12" stlye="padding:10px;">
-                <form id="myForm" align="left" style="background:white; border:grey 1px solid; padding:5px;">
+                <form id="community" align="left" style="background:white; border:grey 1px solid; padding:5px;">
                     <img src="./Google Forms.jpg" style="width:100%;">
                     <p style="font-family:arial; font-size:18px;">
                        </p><center>
@@ -298,26 +298,9 @@
                 </form>
                 
                 <div id="output" styel="background:grey;"></div>
-                
-                <script>
-                function limitWords(id) 
-                {
-                    var maxWords=26;
-                    var d=document.getElementById(id);
-                    if ( d.value.split(' ').length > maxWords ) 
-                    {
-                        confirm("Work Limit of "+maxWords+" words reached. Can't take more.");
-                        t=d.value.substring(0,d.value.lastIndexOf(' '));
-                        d.value=t.substring(0,t.lastIndexOf(' ')+1);
-                    }
-                }
-                
-                
-                </script>
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
                 <!-- Custom Theme JavaScript -->
                 <script src='google-sheet.js'></script>                
-
             </div>
 		    <div class="col-lg-1 col-md-1 col-sm-0 col-xs-0">
             </div>
