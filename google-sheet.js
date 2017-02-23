@@ -17,13 +17,17 @@ $("#community").submit(function(event){
 
     console.log("inputs file type: " + typeof($inputs))
     
-    var file = $('#file').files[0];
-    //var fileresult;
-    reader.readAsDataURL(file);
-    reader.onloadend = function(e) {
-        $form.append(e.target.result);
-        console.log("image: " + e.target.result);
-    };
+    var file = $('#file');
+
+    if (file.files && file.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $form.append(e.target.result);
+        };
+
+        reader.readAsDataURL(file.files[0]);
+    }
 
     // Serialize the data in the form
     var serializedData = $form.serialize();
