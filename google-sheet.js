@@ -23,7 +23,7 @@ $("#community").submit(function(event){
         var reader = new FileReader();
 
         reader.onload = function (e) {
-            $form.append(e.target.result);
+            $form.append('image', e.target.result);
         };
 
         reader.readAsDataURL(file.files[0]);
@@ -41,7 +41,9 @@ $("#community").submit(function(event){
     request = $.ajax({
         url: "https://script.google.com/macros/s/AKfycbwJN5MjGZ9PRrJqtuAqA7JeEB0PqhQIcO0Cox3plhhZ-zQMyYo/exec",
         type: "post",
-        data: serializedData
+        data: serializedData,
+        contentType: false,
+        processData: false
     });
 
     // Callback handler that will be called on success
