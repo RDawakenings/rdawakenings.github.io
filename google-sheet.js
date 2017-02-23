@@ -18,9 +18,8 @@ $("#community").submit(function(event){
     // Serialize the data in the form
     var serializedData = $form.serialize();
 
-    //var photo1 = document.getElementById("file1");
-    //var file = photo1.files[0];
-
+    var photo1 = document.getElementById("file1").val();;
+    $inputs.push(photo1);
     //console.log("File name: " + file.fileName);
     //console.log("File size: " + file.fileSize);
     //console.log("Binary content: " + file.getAsBinary());
