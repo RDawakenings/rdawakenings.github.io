@@ -17,8 +17,8 @@ $("#community").submit(function(event){
 
     console.log("inputs file type: " + typeof($inputs))
     
-    var file = $('#file1').files[0];
-    var fileresult;
+    var file = $('#file').files[0];
+    //var fileresult;
     reader.readAsDataURL(file);
     reader.onloadend = function(e) {
         $form.append(e.target.result);
