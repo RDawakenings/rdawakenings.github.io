@@ -4,7 +4,7 @@ var request;
 // Bind to the submit event of our form
 $("#community").submit(function(event){
 
-    var reader = new FileReader();
+    // var reader = new FileReader();
     // Abort any pending request
     if (request) {
         request.abort();
@@ -15,19 +15,19 @@ $("#community").submit(function(event){
     // Let's select and cache all the fields
     var $inputs = $form.find("input, select, button, textarea");
 
-    console.log("inputs file type: " + typeof($inputs))
+    // console.log("inputs file type: " + typeof($inputs))
     
-    var file = $('#file');
+    // var file = $('#file');
 
-    if (file.files && file.files[0]) {
-        var reader = new FileReader();
+    // if (file.files && file.files[0]) {
+    //     var reader = new FileReader();
 
-        reader.onload = function (e) {
-            $form.append('image', e.target.result);
-        };
+    //     reader.onload = function (e) {
+    //         $form.append('image', e.target.result);
+    //     };
 
-        reader.readAsDataURL(file.files[0]);
-    }
+    //     reader.readAsDataURL(file.files[0]);
+    // }
 
     // Serialize the data in the form
     var serializedData = $form.serialize();
