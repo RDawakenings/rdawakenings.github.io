@@ -19,7 +19,7 @@ $("#community").submit(function(event){
     // Serialize the data in the form
     var serializedData = $form.serialize();
 
-    var file = $('#file1')[0];
+    var file = $('#file1').files[0];
     var fileresult;
     reader.readAsDataURL(file);
     reader.onloadend = function(e) {
