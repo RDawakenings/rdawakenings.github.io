@@ -2,7 +2,7 @@
 var request;
 
 // Bind to the submit event of our form
-$("#community").submit(function(event){
+$("#calendar").submit(function(event){
 
     // var reader = new FileReader();
     // Abort any pending request
