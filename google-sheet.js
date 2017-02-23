@@ -16,21 +16,17 @@ $("#community").submit(function(event){
     var $inputs = $form.find("input, select, button, textarea");
 
     console.log("inputs file type: " + typeof($inputs))
-    // Serialize the data in the form
-    var serializedData = $form.serialize();
-
+    
     var file = $('#file1').files[0];
     var fileresult;
     reader.readAsDataURL(file);
     reader.onloadend = function(e) {
-        fileresult = e.target.result;
+        $form.append(e.target.result);
+        console.log("image: " + e.target.result);
     };
-    //console.log("File name: " + file.fileName);
-    //console.log("File size: " + file.fileSize);
-    //console.log("Binary content: " + file.getAsBinary());
-    //console.log("Text content: " + file.getAsText(""));
-    $inputs.push(fileresult);
-    console.log("image: " + fileresult);
+
+    // Serialize the data in the form
+    var serializedData = $form.serialize();
 
     // Let's disable the inputs for the duration of the Ajax request.
     // Note: we disable elements AFTER the form data has been serialized.
