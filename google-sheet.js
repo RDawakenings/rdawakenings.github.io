@@ -14,7 +14,7 @@ $("#community").submit(function(event){
     // Let's select and cache all the fields
     var $inputs = $form.find("input, select, button, textarea");
 
-    consol.log("inputs file type: " + typeof($inputs))
+    console.log("inputs file type: " + typeof($inputs))
     // Serialize the data in the form
     var serializedData = $form.serialize();
 
