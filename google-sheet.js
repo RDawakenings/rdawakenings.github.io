@@ -11,7 +11,7 @@ $("#community").submit(function(event){
     }
     // setup some local variables
     var $form = $(this);
-
+    
     // Let's select and cache all the fields
     var $inputs = $form.find("input, select, button, textarea");
 
@@ -41,9 +41,7 @@ $("#community").submit(function(event){
     request = $.ajax({
         url: "https://script.google.com/macros/s/AKfycbwJN5MjGZ9PRrJqtuAqA7JeEB0PqhQIcO0Cox3plhhZ-zQMyYo/exec",
         type: "post",
-        data: serializedData,
-        contentType: false,
-        processData: false
+        data: serializedData
     });
 
     // Callback handler that will be called on success
